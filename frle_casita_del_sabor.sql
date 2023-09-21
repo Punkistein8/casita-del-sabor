@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 01-08-2023 a las 23:57:14
+-- Tiempo de generación: 21-09-2023 a las 00:03:06
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `prenda-mujer` (
 --
 
 INSERT INTO `prenda-mujer` (`id_pm`, `nombre_pm`, `precio_pm`, `tipo_pm`, `foto_pm`, `descripcion_pm`) VALUES
-(13, 'Whiskey GOT', 45.5, 'Whiskey', 'https://images.unsplash.com/photo-1602166242292-93a00e63e8e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80', 'Whiskey escocés representativo de Game Of Thrones 9 años de añejamiento');
+(13, 'Whiskey GOT', 45.5, 'Whiskey', 'https://images.unsplash.com/photo-1602166242292-93a00e63e8e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80', 'Whiskey escocés representativo de Game Of Thrones, 9 años de añejamiento');
 
 -- --------------------------------------------------------
 
@@ -111,13 +111,6 @@ CREATE TABLE IF NOT EXISTS `solicitudcompra` (
   `fk_id_usuario` int NOT NULL,
   PRIMARY KEY (`id_soC`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `solicitudcompra`
---
-
-INSERT INTO `solicitudcompra` (`id_soC`, `listaProds_soC`, `fechaCreac_soC`, `nombre_soC`, `apellidos_soC`, `cedula_soC`, `tipoProd_soC`, `fk_id_usuario`) VALUES
-(26, '19', '2023-08-01 23:32:35', 'Henry', 'Guerrero', 1727470229, 'prenda-hombre', 2);
 
 -- --------------------------------------------------------
 
@@ -156,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `pass_usu` varchar(50) NOT NULL,
   `tipo_usu` varchar(20) NOT NULL,
   PRIMARY KEY (`id_usu`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -165,7 +158,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`id_usu`, `nombre_usu`, `user_usu`, `pass_usu`, `tipo_usu`) VALUES
 (1, 'Administrador 1', 'admin', 'admin', 'admin'),
 (2, 'Juan', 'juan', '123', 'user'),
-(6, 'Saul', 'saul@gmail.com', 'Saulero123!', 'user');
+(6, 'Saul', 'saul@gmail.com', 'Saulero123!', 'user'),
+(7, 'Henry', 'henry@gmail.com', '12345678', 'user'),
+(8, 'Prueba', 'prueba@gmail.com', '12345678', 'user');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
